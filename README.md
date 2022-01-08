@@ -22,5 +22,5 @@ The code implements the approach presented in the paper `Towards Knowledge-aware
 
 ### Few-shot learning
 - The `fewshot_model` directory contains the code for traning and validating the vision model informed by the concept embeddings prodcued in the previous step.
-- First run `python base_learning.py --d <image data path> --ef <embeddings file path> --cf <class names file path>` for base learning the vision model
-- Next run `python few-shot_learning.py --d <image data path> --ef <embeddings file path> --cf <class names file path> --model <trained model path>` for few-shot training and validation
+- First run `python base_learning.py --d <image data path> --ef <embeddings file path> --cf <class names file path>` for base learning the vision model.
+- Next run `python few-shot_learning.py --d <image data path> --ef <embeddings file path> --cf <class names file path> --model <trained model path>` for few-shot training and validation.
