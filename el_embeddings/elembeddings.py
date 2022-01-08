@@ -252,15 +252,12 @@ class ELModel(tf.keras.Model):
         sr = rc + rd
         x1 = c[:, 0:-1]
         x2 = d[:, 0:-1]
-        # x1 = x1 / tf.reshape(tf.norm(x1, axis=1), [-1, 1])
-        # x2 = x2 / tf.reshape(tf.norm(x2, axis=1), [-1, 1])
+
 
         dst = tf.reshape(tf.norm(x2 - x1, axis=1), [-1, 1])
-        # return tf.nn.relu(sr - dst + self.margin) + self.reg(x1) + self.reg(x2) + self.reg_r(rc) + self.reg_r(rd)
+
         return tf.nn.relu(sr - dst + self.margin) + self.reg(x1) + self.reg(x2)
-        # return tf.nn.relu(sr - dst + self.margin)
-        # return tf.nn.relu(sr - dst + self.margin)
-        # return tf.nn.relu(sr - dst + 10*self.margin)
+
 
     def top_loss(self, input):
         d = input[:, 0]
